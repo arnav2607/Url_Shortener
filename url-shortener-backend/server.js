@@ -6,12 +6,23 @@ require('dotenv').config();
 const app = express();
 
 // CORS Configuration - ADD THIS FIRST
+// app.use(cors({
+//   origin: ['http://localhost:3000',
+//     'https://url-shortener-yqph.vercel.app/'],
+//   credentials: true,
+//   optionsSuccessStatus: 200
+// }));
+
+
 app.use(cors({
-  origin: ['http://localhost:3000',
-    'https://url-shortener-yqph.vercel.app/'],
+  origin: [
+    'http://localhost:3000',
+    'https://url-shortener-yqph.vercel.app'  // ✅ add your Vercel domain
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
-  optionsSuccessStatus: 200
 }));
+
 
 // Other Middleware
 app.use(express.json());
