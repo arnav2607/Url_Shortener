@@ -8,7 +8,7 @@ const app = express();
 // CORS Configuration - ADD THIS FIRST
 app.use(cors({
   origin: ['http://localhost:3000',
-    'https://your-vercel-app.vercel.app'],
+    'https://url-shortener-yqph.vercel.app/'],
   credentials: true,
   optionsSuccessStatus: 200
 }));
